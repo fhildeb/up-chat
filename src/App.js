@@ -5,6 +5,8 @@ import Landing from "./pages/Landing.tsx";
 import Onboarding from "./pages/Onboarding.tsx";
 import Chat from "./pages/Chat.tsx";
 import FAQ from "./pages/FAQ.tsx";
+import Friendlist from "./pages/Friendlist.tsx";
+import Reputation from "./pages/Reputation.tsx";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/friendlist" element={<Friendlist />} />
+        <Route path="/reputation" element={<Reputation />} />
       </Routes>
     </Router>
   );

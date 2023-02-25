@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react";
 import Menu from "../components/user-interface/Menu";
 
-const Chat: FunctionComponent = () => {
+const Reputation: FunctionComponent = () => {
   return (
     <div>
       <Menu />
-      <h1>Chat</h1>
+      <h1>Friendlist</h1>
     </div>
   );
 };
 
-export default Chat;
+export default Reputation;
