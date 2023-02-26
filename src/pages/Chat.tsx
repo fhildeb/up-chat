@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from "react";
-import Menu from "../components/user-interface/Menu";
+import React, { FunctionComponent } from 'react';
+import Menu from '../components/user-interface/Menu';
 
 const Chat: FunctionComponent = () => {
   return (

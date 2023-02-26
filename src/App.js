@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Landing from "./pages/Landing.tsx";
-import Onboarding from "./pages/Onboarding.tsx";
-import Chat from "./pages/Chat.tsx";
-import FAQ from "./pages/FAQ.tsx";
-import Friendlist from "./pages/Friendlist.tsx";
-import Reputation from "./pages/Reputation.tsx";
+import Landing from './pages/Landing.tsx';
+import Onboarding from './pages/Onboarding.tsx';
+import Chat from './pages/Chat.tsx';
+import FAQ from './pages/FAQ.tsx';
+import Friendlist from './pages/Friendlist.tsx';
+import Reputation from './pages/Reputation.tsx';
 
 function App() {
   return (

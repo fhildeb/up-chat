@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const useGlobalState = () => {
   // Boolean for Darkmode and Lightmode
@@ -11,7 +11,7 @@ const useGlobalState = () => {
   const [isLSP0Standard, setIsLSP0Standard] = useState(false);
 
   // String for storing the Universal Profile Address
-  const [universalProfileAddress, setUniversalProfileAddress] = useState("");
+  const [universalProfileAddress, setUniversalProfileAddress] = useState('');
 
   // Object for storing the Metadata Object
   const [universalProfileMetaData, setUniversalProfileMetaData] = useState([]);
