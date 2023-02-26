@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import Menu from '../components/user-interface/Menu';
 
 const Chat: FunctionComponent = () => {
