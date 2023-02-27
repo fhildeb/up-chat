@@ -1,18 +1,27 @@
 import { createContext, useContext, useState } from 'react';
 
 /**
- * Specifying the shape of the global state object
- * and defining the types of the state update functions
+ * Specifying the shape of the global state object and
+ * defining the types of the state update functions.
  */
 type GlobalState = {
+  // Boolean for Darkmode
   isDarkMode: boolean;
   setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+
+  // Boolean for Network check
   isL16Network: boolean;
   setIsL16Network: React.Dispatch<React.SetStateAction<boolean>>;
+
+  // Boolean for LSP0 check
   isLSP0Standard: boolean;
   setIsLSP0Standard: React.Dispatch<React.SetStateAction<boolean>>;
+
+  // String for storing the Universal Profile Address
   universalProfileAddress: string;
   setUniversalProfileAddress: React.Dispatch<React.SetStateAction<string>>;
+
+  // JSON Object for storing the Metadata Object
   universalProfileMetaData: { [key: string]: any };
   setUniversalProfileMetaData: React.Dispatch<
     React.SetStateAction<{ [key: string]: any }>
@@ -38,23 +47,25 @@ const GlobalStateContext = createContext<GlobalState>({
 });
 
 /**
- * Provider component that wraps the app and therefore
- * makes the context available to all child components
+ * Provider component that provides a way for child components
+ * to access and update global state variables and functions.
+ *
+ * @returns {JSX.Element} The Provider component
  */
 const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
-  // Boolean for Darkmode and Lightmode
+  // Darkmode
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Boolean for Network check
+  // Network check
   const [isL16Network, setIsL16Network] = useState(false);
 
-  // Boolean for LSP0 check
+  // LSP0 check
   const [isLSP0Standard, setIsLSP0Standard] = useState(false);
 
-  // String for storing the Universal Profile Address
+  // Universal Profile Address
   const [universalProfileAddress, setUniversalProfileAddress] = useState('');
 
-  // Object for storing the Metadata Object
+  // Metadata Object
   const [universalProfileMetaData, setUniversalProfileMetaData] = useState({});
 
   const state: GlobalState = {
@@ -79,9 +90,12 @@ const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
 
 /**
  * Custom hook to use the context in child components.
- * The function retrieves the GlobalState object from the
- * context and returns its objects with the specified state
- * variables and functions.
+ * The hook function retrieves the GlobalState object from the
+ * context to get its objects. It allows child components to access
+ * and update global state variables and functions without having
+ * to pass them down as props.
+ *
+ * @returns {GlobalState} State object as variable and function
  */
 const useGlobalState = () => {
   const {

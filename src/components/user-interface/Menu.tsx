@@ -1,18 +1,15 @@
-import React from 'react';
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Menu = () => {
-  /**
-   * Using React Router DOM:
-   *
-   * import { Link } from "react-router-dom";
-   * <Link to="/">Home</Link>
-   */
-
+/**
+ * Functional component that renders a responsive Navbar
+ * with NavLinks and a NavDropdown
+ *
+ * @returns {JSX.Element} Navbar component
+ */
+const Menu = (): JSX.Element => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -25,7 +22,7 @@ const Menu = () => {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" role="navigation">
           <Nav className="justify-content-evenly">
             <Nav.Link href="/chat">Chat</Nav.Link>
             <Nav.Link href="/friendlist">Friendlist</Nav.Link>
