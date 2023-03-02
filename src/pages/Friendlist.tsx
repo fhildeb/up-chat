@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import Menu from '../components/user-interface/Menu';
+import MenuBar from '../components/user-interface/MenuBar';
 
 /**
  * Renders the Friendlist page, which displays
@@ -11,7 +11,7 @@ import Menu from '../components/user-interface/Menu';
 const Friendlist: FunctionComponent = (): JSX.Element => {
   return (
     <div>
-      <Menu />
+      <MenuBar />
       <h1>Friendlist</h1>
     </div>
   );

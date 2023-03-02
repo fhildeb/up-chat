@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import Menu from '../components/user-interface/Menu';
+import MenuBar from '../components/user-interface/MenuBar';
 
 /**
  * Renders the Chat page, which displays
@@ -10,7 +10,7 @@ import Menu from '../components/user-interface/Menu';
 const Chat: FunctionComponent = (): JSX.Element => {
   return (
     <div>
-      <Menu />
+      <MenuBar />
       <h1>Chat</h1>
     </div>
   );

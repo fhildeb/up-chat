@@ -9,7 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
  *
  * @returns {JSX.Element} Navbar component
  */
-const Menu = (): JSX.Element => {
+const MenuBar = (): JSX.Element => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -39,4 +39,4 @@ const Menu = (): JSX.Element => {
   );
 };
 
-export default Menu;
+export default MenuBar;
