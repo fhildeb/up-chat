@@ -6,7 +6,7 @@ import Chat from './pages/Chat';
 import FAQ from './pages/FAQ';
 import Friendlist from './pages/Friendlist';
 import Reputation from './pages/Reputation';
-
+import { GlobalStateProvider } from './contexts/GlobalState';
 /**
  * Entry point of the application.
  *
@@ -14,20 +14,24 @@ import Reputation from './pages/Reputation';
  * When navigating to a certain path, the route renders the corresponding
  * component.
  *
+ * Global State Provider is used as wapper to enable state across components
+ *
  * @returns {ReactNode} The root node of the React application.
  */
 const App = (): JSX.Element => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/onboarding" element={<Onboarding />} />
-        <Route path="/chat" element={<Chat />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/friendlist" element={<Friendlist />} />
-        <Route path="/reputation" element={<Reputation />} />
-      </Routes>
-    </Router>
+    <GlobalStateProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/friendlist" element={<Friendlist />} />
+          <Route path="/reputation" element={<Reputation />} />
+        </Routes>
+      </Router>
+    </GlobalStateProvider>
   );
 };
 

@@ -18,7 +18,7 @@ type GlobalState = {
   setIsLSP0Standard: React.Dispatch<React.SetStateAction<boolean>>;
 
   // String for storing the Universal Profile Address
-  universalProfileAddress: string;
+  universalProfileAddress: string | null;
   setUniversalProfileAddress: React.Dispatch<React.SetStateAction<string>>;
 
   // JSON Object for storing the Metadata Object
@@ -40,7 +40,7 @@ const GlobalStateContext = createContext<GlobalState>({
   setIsL16Network: () => {},
   isLSP0Standard: false,
   setIsLSP0Standard: () => {},
-  universalProfileAddress: '',
+  universalProfileAddress: null,
   setUniversalProfileAddress: () => {},
   universalProfileMetaData: {},
   setUniversalProfileMetaData: () => {},
@@ -63,7 +63,7 @@ const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
   const [isLSP0Standard, setIsLSP0Standard] = useState(false);
 
   // Universal Profile Address
-  const [universalProfileAddress, setUniversalProfileAddress] = useState('');
+  const [universalProfileAddress, setUniversalProfileAddress] = useState(null);
 
   // Metadata Object
   const [universalProfileMetaData, setUniversalProfileMetaData] = useState({});
