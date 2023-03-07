@@ -1,0 +1,10 @@
+// Predefined Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Customized Bootstrap
+@import 'custom';
+
+// Regular Styling
+.navbarName {
+  margin-right: 10px;
+}
