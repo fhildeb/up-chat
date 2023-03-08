@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 
 /**
  * Functional component that renders a responsive Navbar
@@ -10,6 +11,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
  * @returns {JSX.Element} Navbar component
  */
 const MenuBar = (): JSX.Element => {
+  let loggedIn = true;
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -27,11 +30,20 @@ const MenuBar = (): JSX.Element => {
             <Nav.Link href="/chat">Chat</Nav.Link>
             <Nav.Link href="/friendlist">Friendlist</Nav.Link>
             <Nav.Link href="/reputation">Reputation</Nav.Link>
-            <NavDropdown title="Help" id="basic-nav-dropdown">
+            <NavDropdown title="Information" id="basic-nav-dropdown">
               <NavDropdown.Item href="/landing">Features</NavDropdown.Item>
               <NavDropdown.Item href="/onboarding">Onboarding</NavDropdown.Item>
               <NavDropdown.Item href="/faq">FAQ</NavDropdown.Item>
             </NavDropdown>
+          </Nav>
+          <Nav className="ms-auto">
+            {loggedIn ? (
+              <>
+                <Button variant="outline-primary">Disconnect</Button>
+              </>
+            ) : (
+              <Button variant="primary">Connect</Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
