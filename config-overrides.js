@@ -17,6 +17,7 @@ module.exports = function override(config) {
     net: require.resolve('net'),
     tls: require.resolve('tls'),
     path: require.resolve('path-browserify'),
+    'process/browser': require.resolve('process/browser'),
     fs: false, // disable node.js fs module
   });
 
@@ -26,7 +27,7 @@ module.exports = function override(config) {
   // Add the webpack plugin to provide global variables in the config
   config.plugins = (config.plugins || []).concat([
     new webpack.ProvidePlugin({
-      process: 'process/browser',
+      process: 'process/browser.js',
       Buffer: ['buffer', 'Buffer'],
     }),
   ]);

@@ -2,7 +2,7 @@ import { FunctionComponent, useEffect } from 'react';
 import MenuBar from '../components/user-interface/MenuBar';
 import { useGlobalState } from '../contexts/GlobalState';
 import useGetUserAddress from '../components/extension-bridge/Address';
-
+import DM3 from 'dm3-react';
 /**
  * Renders the Chat page, which displays
  * all open chat rooms with friends.
@@ -29,7 +29,14 @@ const Chat: FunctionComponent = (): JSX.Element => {
     <div>
       <MenuBar />
       <h1>Chat</h1>
-      <p>User Address: {universalProfileAddress}</p>
+      <DM3
+        hideStorageSelection={true}
+        defaultContact={universalProfileAddress}
+        defaultServiceUrl=";_;"
+        inline={true}
+        style={{ margin: '2rem', minHeight: '600px' }}
+        showHelp={true}
+      />
     </div>
   );
 };
