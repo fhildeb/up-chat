@@ -28,14 +28,17 @@ const Chat: FunctionComponent = (): JSX.Element => {
   return (
     <div>
       <MenuBar />
-      <h1>Chat</h1>
       <DM3
         hideStorageSelection={true}
         defaultContact={universalProfileAddress}
         defaultServiceUrl=";_;"
         inline={true}
-        style={{ margin: '2rem', minHeight: '600px' }}
-        showHelp={true}
+        style={{
+          margin: '15rem',
+          minHeight: '600px',
+          padding: '0px 0px 110px 0px',
+        }}
+        showHelp={false}
       />
     </div>
   );

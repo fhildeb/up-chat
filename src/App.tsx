@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from 'react-router-dom';
 
 import Landing from './pages/Landing';
 import Onboarding from './pages/Onboarding';
@@ -23,7 +28,7 @@ const App = (): JSX.Element => {
     <GlobalStateProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Navigate to="/chat" replace />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/faq" element={<FAQ />} />

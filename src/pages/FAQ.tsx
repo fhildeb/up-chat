@@ -1,8 +1,5 @@
 import { FunctionComponent } from 'react';
-
-const FAQ: FunctionComponent = (): JSX.Element => {
-  return <h1>FAQ</h1>;
-};
+import MenuBar from '../components/user-interface/MenuBar';
 
 /**
  * Renders the FAQ page, which displays
@@ -12,4 +9,12 @@ const FAQ: FunctionComponent = (): JSX.Element => {
  *
  * @returns {JSX.Element} The rendered FAQ page.
  */
+const FAQ: FunctionComponent = (): JSX.Element => {
+  return (
+    <div>
+      <MenuBar />
+    </div>
+  );
+};
+
 export default FAQ;

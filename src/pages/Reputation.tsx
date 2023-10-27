@@ -11,7 +11,6 @@ const Reputation: FunctionComponent = (): JSX.Element => {
   return (
     <div>
       <MenuBar />
-      <h1>Reputation</h1>
     </div>
   );
 };

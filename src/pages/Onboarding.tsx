@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import MenuBar from '../components/user-interface/MenuBar';
 
 /**
  * Renders the Onboarding page, which displays
@@ -8,7 +9,11 @@ import { FunctionComponent } from 'react';
  * @returns {JSX.Element} The rendered Onboarding page.
  */
 const Onboarding: FunctionComponent = (): JSX.Element => {
-  return <h1>Onboarding</h1>;
+  return (
+    <div>
+      <MenuBar />
+    </div>
+  );
 };
 
 export default Onboarding;

@@ -31,7 +31,6 @@ const MenuBar = (): JSX.Element => {
             <Nav.Link href="/friendlist">Friendlist</Nav.Link>
             <Nav.Link href="/reputation">Reputation</Nav.Link>
             <NavDropdown title="Information" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/landing">Features</NavDropdown.Item>
               <NavDropdown.Item href="/onboarding">Onboarding</NavDropdown.Item>
               <NavDropdown.Item href="/faq">FAQ</NavDropdown.Item>
             </NavDropdown>

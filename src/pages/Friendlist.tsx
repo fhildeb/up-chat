@@ -12,7 +12,6 @@ const Friendlist: FunctionComponent = (): JSX.Element => {
   return (
     <div>
       <MenuBar />
-      <h1>Friendlist</h1>
     </div>
   );
 };
