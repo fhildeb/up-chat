@@ -1,40 +1,51 @@
 # up-chat
 
-Social Chat Tool for Universal Profiles
+Social Chat Tool for Universal Profiles.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This is a minimal framework for a decentralized chat application using the [`dm3`](https://github.com/corpus-io/dm3) messaging protocol.
 
-### `npm start`
+![App Showcase](/img/app_showcase.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Development
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This app is only running by adding a custom library.
 
-### `npm test`
+### Integration
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone and modify the [`dm3`](https://github.com/corpus-io/dm3) protocol library
 
-### `npm run build`
+   ```sh
+   git clone git@github.com:corpus-io/dm3.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Build and link the customized interface
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```sh
+   npm build && cd packages/react && npm link
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Import the library from the created system link
 
-### `npm run eject`
+   ```sh
+   npm link dm3-react
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Run or build the application from source files
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Interactive Mode
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Runs the browser application on the [`localhost`](http://localhost:3000) address.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+npm start
+```
+
+### Production
+
+Builds the optimized application bundle for production.
+
+```sh
+npm run build
+```
